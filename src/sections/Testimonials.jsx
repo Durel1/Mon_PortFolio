@@ -1,150 +1,96 @@
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { useState } from "react";
+import { GraduationCap, Calendar, MapPin } from "lucide-react";
 
-const testimonials = [
+const educationData = [
   {
-    quote:
-      "Pedro is one of the most talented engineers I've worked with. His attention to detail and ability to translate complex requirements into elegant solutions is remarkable.",
-    author: "Sarah Chen",
-    role: "CTO, Tech Innovators Inc.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+    period: "09/2025 - En cours",
+    degree: "Diplôme d'ingénieur software & data",
+    school: "ESIEA",
+    location: "Paris",
+    description: "Formation d'ingénieur (Niveau Bac+3). Spécialisation approfondie en ingénierie logicielle, data science, et systèmes embarqués, avec une forte composante pratique et projets.",
+    active: true,
   },
   {
-    quote:
-      "Working with Pedro was a game-changer for our project. He delivered ahead of schedule with code quality that set a new standard for our team.",
-    author: "Michael Rodriguez",
-    role: "Product Manager, Digital Solutions",
-    avatar:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+    period: "09/2024 - 07/2025",
+    degree: "Licence : Génie Logiciel",
+    school: "IUT de Douala",
+    location: "Douala",
+    description: "Mention Bien. Consolidation des compétences en développement full-stack, conception d'architectures logicielles et gestion de bases de données.",
+    active: false,
   },
   {
-    quote:
-      "Pedro's expertise in React and TypeScript helped us rebuild our entire frontend in record time. His architectural decisions continue to pay dividends.",
-    author: "Emily Watson",
-    role: "Engineering Lead, StartUp Labs",
-    avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
-  },
-  {
-    quote:
-      "Not only is Pedro technically brilliant, but he's also a fantastic communicator and team player. He elevated everyone around him.",
-    author: "David Kim",
-    role: "CEO, Innovation Hub",
-    avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+    period: "09/2022 - 07/2024",
+    degree: "DUT : Génie Informatique",
+    school: "IUT de Douala",
+    location: "Douala",
+    description: "Mention Assez Bien. Apprentissage des fondamentaux de la programmation, de l'algorithmique et du travail en équipe sur des projets informatiques.",
+    active: false,
   },
 ];
 
 export const Testimonials = () => {
-  const [activeIdx, setActiveIdx] = useState(0);
-
-  const next = () => {
-    setActiveIdx((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const previous = () => {
-    setActiveIdx(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
-    );
-  };
   return (
-    <section id="testimonials" className="py-32 relative overflow-hidden">
+    <section id="education" className="py-32 relative overflow-hidden">
+      {/* Background decoration matching the original style */}
       <div
-        className="absolute top-1/2 left-1/2
-       w-[800px] h-[800px] bg-primary/5
-        rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"
+        className="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"
       />
-      <div
-        className="container mx-auto 
-      px-6 relative z-10"
-      >
+      
+      <div className="container mx-auto px-6 relative z-10">
+        
         {/* Section Header */}
-        <div
-          className="text-center max-w-3xl 
-        mx-auto mb-16"
-        >
-          <span
-            className="text-secondary-foreground 
-          text-sm font-medium tracking-wider 
-          uppercase animate-fade-in"
-          >
-            What People Say
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
+            Mon Parcours
           </span>
-          <h2
-            className="text-4xl md:text-5xl 
-          font-bold mt-4 mb-6 animate-fade-in 
-          animation-delay-100 text-secondary-foreground"
-          >
-            Kind words from{" "}
-            <span
-              className="font-serif italic 
-            font-normal text-white"
-            >
-              amazing people.
+          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
+            Formation{" "}
+            <span className="font-serif italic font-normal text-white">
+              académique.
             </span>
           </h2>
         </div>
 
-        {/* Testimonial Carousel */}
+        {/* Timeline Layout */}
         <div className="max-w-4xl mx-auto">
-          <div className="relative">
-            {/* Main Testimonial */}
-            <div className="glass p-8 rounded-3xl md:p-12 glow-border animate-fade-in animation-delay-200">
-              <div className="absolute -top-4 left-8 w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                <Quote className="w-6 h-6 text-primary-foreground" />
-              </div>
+          <div className="relative border-l border-primary/20 ml-4 md:ml-8">
+            {educationData.map((item, index) => (
+              <div 
+                key={index} 
+                className={`mb-12 ml-8 md:ml-12 animate-fade-in`}
+                style={{ animationDelay: `${(index + 2) * 100}ms` }}
+              >
+                {/* Timeline Dot/Icon */}
+                <span className={`absolute flex items-center justify-center w-12 h-12 rounded-full -left-6 ring-4 ring-background ${item.active ? 'bg-primary text-primary-foreground shadow-[0_0_15px_rgba(var(--primary),0.5)]' : 'bg-secondary text-secondary-foreground glass'}`}>
+                  <GraduationCap className="w-6 h-6" />
+                </span>
 
-              <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-8 pt-4">
-                "{testimonials[activeIdx].quote}"
-              </blockquote>
+                {/* Content Card - C'est ici que j'ai ajouté ml-10 md:ml-12 */}
+                <div className={`glass ml-10 md:ml-12 p-6 md:p-8 rounded-2xl md:rounded-3xl transition-all duration-300 hover:-translate-y-1 ${item.active ? 'glow-border ring-1 ring-primary/30' : 'border border-primary/10'}`}>
+                  
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-2">
+                    <h3 className="text-xl md:text-2xl font-bold text-white">
+                      {item.degree}
+                    </h3>
+                    <div className="flex items-center text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full w-fit">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      {item.period}
+                    </div>
+                  </div>
 
-              <div className="flex items-center gap-4">
-                <img
-                  src={testimonials[activeIdx].avatar}
-                  alt={testimonials[activeIdx].author}
-                  className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
-                />
-                <div>
-                  <div className="font-semibold">
-                    {testimonials[activeIdx].author}
+                  <div className="flex items-center text-secondary-foreground font-semibold text-lg mb-4">
+                    <span className="mr-4">{item.school}</span>
+                    <div className="flex items-center text-muted-foreground text-sm font-normal">
+                      <MapPin className="w-4 h-4 mr-1" />
+                      {item.location}
+                    </div>
                   </div>
-                  <div className="text-sm text-muted-foreground">
-                    {testimonials[activeIdx].role}
-                  </div>
+
+                  <p className="text-muted-foreground leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
               </div>
-            </div>
-
-            {/* Testimonials Navigation */}
-            <div className="flex items-center justify-center gap-4 mt-8">
-              <button
-                className="p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
-                onClick={previous}
-              >
-                <ChevronLeft />
-              </button>
-
-              <div className="flex gap-2">
-                {testimonials.map((_, idx) => (
-                  <button
-                    onClick={() => setActiveIdx(idx)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      idx === activeIdx
-                        ? "w-8 bg-primary"
-                        : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                    }`}
-                  />
-                ))}
-              </div>
-
-              <button
-                onClick={next}
-                className="p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
-              >
-                <ChevronRight />
-              </button>
-            </div>
+            ))}
           </div>
         </div>
       </div>
