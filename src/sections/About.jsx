@@ -3,26 +3,26 @@ import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
 const highlights = [
   {
     icon: Code2,
-    title: "Clean Code",
+    title: "Code Maîtrisé",
     description:
-      "Writing maintainable, scalable code that stands the test of time.",
+      "Écrire un code propre, maintenable et structuré, en s'assurant de comprendre profondément chaque concept sous-jacent.",
   },
   {
     icon: Rocket,
-    title: "Performance",
+    title: "Performance & Polyvalence",
     description:
-      "Optimizing for speed and delivering lightning-fast user experiences.",
+      "Optimiser l'efficacité de chaque solution, de la fluidité des interfaces web au traitement de jeux de données massifs.",
   },
   {
     icon: Users,
-    title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
+    title: "CEsprit d'Équipe",
+    description: "Collaborer efficacement au sein d'équipes multidisciplinaires, en valorisant la communication et le partage de connaissances.",
   },
   {
     icon: Lightbulb,
-    title: "Innovation",
+    title: "Curiosité & Innovation",
     description:
-      "Staying ahead with the latest technologies and best practices.",
+      "Maintenir une veille technologique constante pour intégrer les meilleures pratiques et les dernières avancées en IA, Data et développement.",
   },
 ];
 
@@ -35,44 +35,38 @@ export const About = () => {
           <div className="space-y-8">
             <div className="animate-fade-in">
               <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
-                About Me
+                À propos de moi
               </span>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Building the future,
+              Comprendre l'invisible pour,
               <span className="font-serif italic font-normal text-white">
                 {" "}
-                one component at a time.
+                construire des solutions d'impact.
               </span>
             </h2>
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a passionate software engineer with over 5 years of
-                experience crafting digital products that make a difference. My
-                journey started with a curiosity for how things work on the web,
-                and it has evolved into a deep expertise in modern frontend
-                technologies.
+                Je suis un étudiant ingénieur passionné par la conception d'outils numériques complets
+                 et intelligents. Mon parcours a débuté par une curiosité pour le développement web, 
+                 et a rapidement évolué vers une expertise transverse mêlant développement logiciel, 
+                 ingénierie des données et systèmes embarqués.
               </p>
               <p>
-                I specialize in React, Next.js, and TypeScript, building
-                everything from sleek landing pages to complex enterprise
-                applications. My approach combines technical excellence with a
-                keen eye for design and user experience.
+                De la création d'architectures backend (Python, Java) au développement d'interfaces interactives (React, Angular),
+                ma philosophie technique est stricte : toujours maîtriser les concepts sous-jacents de mon code plutôt
+                que de me limiter à leur simple application.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or sharing knowledge with
-                the developer community.
+                Lorsque je ne suis pas en train de coder ou d'explorer de nouvelles documentations techniques, je m'investis dans les sports d'équipe comme le football ou le basket-ball, où je retrouve la même dynamique de collaboration et de stratégie que dans mes projets d'ingénierie. Je suis actuellement à la recherche d'une alternance de 2 ans à partir de septembre 2026, sur un rythme de 2 semaines / 2 semaines, pour évoluer en tant que développeur logiciel ou data scientist au sein d'une équipe stimulante.
               </p>
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "My mission is to create digital experiences that are not just
-                functional, but truly delightful — products that users love to
-                use and developers love to maintain."
+                "Ma mission est de concevoir des applications où la complexité technique s'efface pour laisser place à des solutions robustes, fluides et véritablement utiles."
               </p>
             </div>
           </div>

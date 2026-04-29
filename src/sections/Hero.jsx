@@ -31,6 +31,7 @@ const skills = [
   "Tailwind CSS",
   "Figma",
   "Git",
+  "CI/CD",
   "GitHub Actions",
 ];
 
@@ -100,7 +101,7 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Bonjour, je suis Durel Kenfack — étudiant ingénieur spécialisé en développement logiciel
+                Bonjour, je suis Durel Kenfack, étudiant ingénieur spécialisé en développement logiciel
                 et intelligence artificielle. En m'appuyant sur des technologies comme React, Python et 
                 Java, j'aime comprendre la mécanique de chaque ligne de code pour créer des applications 
                 performantes. Je suis actuellement à la recherche d'une alternance de 2 ans  pour mettre

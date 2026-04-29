@@ -14,20 +14,20 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "pedro@example.com",
-    href: "mailto:pedro@example.com",
+    value: "kenfdurel10@gmail.com",
+    href: "mailto:kenfdurel10@gmail.com",
   },
   {
     icon: Phone,
-    label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    label: "Téléphone",
+    value: "+33 6 64 04 18 13",
+    href: "tel:+33664041813",
   },
   {
     icon: MapPin,
-    label: "Location",
-    value: "San Francisco, CA",
-    href: "#",
+    label: "Localisation",
+    value: "Paris, France",
+    href: "https://www.google.com/maps/place/Paris,+France",
   },
 ];
 
@@ -97,10 +97,10 @@ export const Contact = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            Get In Touch
+            Contactez-moi
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-            Let's build{" "}
+            Construisons{" "}
             <span className="font-serif italic font-normal text-white">
               something great.
             </span>
@@ -242,9 +242,7 @@ export const Contact = () => {
                 <span className="font-medium">Currently Available</span>
               </div>
               <p className="text-muted-foreground text-sm">
-                I'm currently open to new opportunities and exciting projects.
-                Whether you need a full-time engineer or a freelance consultant,
-                let's talk!
+                Je suis activement à l'écoute de nouvelles opportunités pour septembre 2026. Que vous recherchiez un profil en développement logiciel ou en data science/ Data analyst, je suis disponible pour un contrat d'alternance de 2 ans (rythme 2 semaines / 2 semaines). Discutons de vos futurs projets !
               </p>
             </div>
           </div>
