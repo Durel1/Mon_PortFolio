@@ -7,9 +7,9 @@ const socialLinks = [
 ];
 
 const footerLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
+  { href: "#about", label: "À Propos" },
+  { href: "#projects", label: "Projets" },
+  { href: "#experience", label: "Expérience" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -30,7 +30,8 @@ export const Footer = () => {
           <img src="/public/KD_Logo.png" alt="" className="h-10 w-auto" />
         </a>
             <p className="text-sm text-muted-foreground mt-2">
-              © {currentYear} Durel Kenfack. All rights reserved.
+              © {currentYear} Durel Kenfack. Tous droits réservés
+.
             </p>
           </div>
 
