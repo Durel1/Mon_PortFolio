@@ -2,40 +2,40 @@ import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "Explorateur de Données Offshore Leaks",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
+      "Une plateforme d'exploration et d'analyse de données de réseaux massifs liés aux paradis fiscaux et à la transparence financière. Elle propose une visualisation graphique interactive, une recherche par entité et une détection d'anomalies, permettant de révéler des connexions cachées entre entreprises, individus et juridictions.",
     image: "/projects/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
-    link: "#",
-    github: "#",
+    tags: ["Python", "Data Analysis", "Théorie des Graphes","Visualisation Interactive"],
+    link: "https://offshoreleaks.icij.org/",
+    github: "https://github.com/Durel1/Offshore_Leaks",
   },
   {
-    title: "E-Commerce Platform",
+    title: "GetJob",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "AI Writing Assistant",
-    description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
+      "Une plateforme full-stack de recrutement connectant les étudiants et les recruteurs, intégrant une authentification sécurisée et la gestion des données en temps réel.React Supabase Real-time Data",
     image: "/projects/project3.png",
     tags: ["React", "OpenAI", "Python", "FastAPI"],
+    link: "https://my-getjob-app.vercel.app/",
+    github: "https://github.com/Durel1/GetJob",
+  },
+   {
+    title: "E-Commerce Platform",
+    description:
+      "Une solution e-commerce complète avec gestion des stocks, traitement des paiements et tableau de bord analytique.",
+    image: "/projects/project2.png",
+    tags: ["Angula","Tailwind", "PHP", "Laravel","MySQL"],
     link: "#",
     github: "#",
   },
   {
-    title: "Project Management Tool",
+    title: "Serveur MCP – Pilotage IA & Robotique",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
+      "Implémentation du Model Context Protocol (MCP) pour créer un pont sécurisé entre une IA et le monde physique, transformant un robot en un agent autonome capable d'explorer et d'analyser son environnement.",
     image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
+    tags: ["Python", "FastMCP", "Raspberry Pi", "Claude AI"],
+    link: "https://github.com/Durel1/ServeurMCP_pour_esieabot",
+    github: "https://github.com/Durel1/ServeurMCP_pour_esieabot",
   },
 ];
 
@@ -49,18 +49,17 @@ export const Projects = () => {
         {/* Section Header */}
         <div className="text-center mx-auto max-w-3xl mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            Featured Work
+            Projets Phares
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-            Projects that
+            Des réalisations
             <span className="font-serif italic font-normal text-white">
               {" "}
-              make an impact.
+               qui ont de l'impact.
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A selection of my recent work, from complex web applications to
-            innovative tools that solve real-world problems.
+            Une sélection de mes travaux récents, allant de l'analyse complexe de réseaux de données massifs au développement d'applications web complètes et d'architectures Cloud intégrant l'IA.
           </p>
         </div>
 
@@ -133,12 +132,14 @@ export const Projects = () => {
         </div>
 
         {/* View All CTA */}
+        <a href="https://github.com/Durel1?tab=repositories">
         <div className="text-center mt-12 animate-fade-in animation-delay-500">
           <AnimatedBorderButton>
-            View All Projects
+            Voir tous Mes projets
             <ArrowUpRight className="w-5 h-5" />
           </AnimatedBorderButton>
         </div>
+        </a>
       </div>
     </section>
   );
