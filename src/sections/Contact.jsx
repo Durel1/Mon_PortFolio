@@ -102,12 +102,11 @@ export const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
             Construisons{" "}
             <span className="font-serif italic font-normal text-white">
-              something great.
+              quelque chose de grand.
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            Have a project in mind? I'd love to hear about it. Send me a message
-            and let's discuss how we can work together.
+            Vous avez un projet en tête ? J’adorerais en savoir plus. Envoyez-moi un message et discutons-en pour voir comment nous pouvons collaborer.
           </p>
         </div>
 
@@ -125,7 +124,7 @@ export const Contact = () => {
                   id="name"
                   type="text"
                   required
-                  placeholder="Your name..."
+                  placeholder="Votre nom..."
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -144,7 +143,7 @@ export const Contact = () => {
                 </label>
                 <input
                   required
-                  placeholder="your@email.com"
+                  placeholder="nom@email.com"
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
@@ -167,7 +166,7 @@ export const Contact = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  placeholder="Your message..."
+                  placeholder="Votre message..."
                   className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
                 />
               </div>
@@ -179,7 +178,7 @@ export const Contact = () => {
                 disabled={isLoading}
               >
                 {isLoading ? (
-                  <>Sending...</>
+                  <>Envoie...</>
                 ) : (
                   <>
                     Send Message
@@ -212,7 +211,7 @@ export const Contact = () => {
           <div className="space-y-6 animate-fade-in animation-delay-400">
             <div className="glass rounded-3xl p-8">
               <h3 className="text-xl font-semibold mb-6">
-                Contact Information
+                Coordonnées
               </h3>
               <div className="space-y-4">
                 {contactInfo.map((item, i) => (
@@ -239,7 +238,7 @@ export const Contact = () => {
             <div className="glass rounded-3xl p-8 border border-primary/30">
               <div className="flex items-center gap-3 mb-4">
                 <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                <span className="font-medium">Currently Available</span>
+                <span className="font-medium">Disponible pour une alternance</span>
               </div>
               <p className="text-muted-foreground text-sm">
                 Je suis activement à l'écoute de nouvelles opportunités pour septembre 2026. Que vous recherchiez un profil en développement logiciel ou en data science/ Data analyst, je suis disponible pour un contrat d'alternance de 2 ans (rythme 2 semaines / 2 semaines). Discutons de vos futurs projets !

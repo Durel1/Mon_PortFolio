@@ -1,38 +1,29 @@
 const experiences = [
   {
-    period: "2022 — Present",
-    role: "Senior Frontend Engineer",
-    company: "Tech Innovators Inc.",
+    period: "03/2026 — Présent",
+    role: "Employé Polyvalent",
+    company: "Job&Talent - Pontoise",
     description:
-      "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+      "Évolution dans un environnement exigeant nécessitant le respect strict des délais et le maintien d'une cadence soutenue. Démontre une forte capacité d'organisation, de rigueur d'exécution, d'adaptation rapide à différents contextes et de travail en équipe.",
+    technologies: ["Adaptabilité", "Rigueur", "Travail d'équipe", "Gestion du temps"],
     current: true,
   },
   {
-    period: "2020 — 2022",
-    role: "Frontend Engineer",
-    company: "Digital Solutions Co.",
+    period: "01/2024 — 06/2024",
+    role: "Développeur Full Stack (CDD)",
+    company: "CAM-TECH - Douala",
     description:
-      "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
-    technologies: ["React", "Redux", "Jest", "Cypress"],
+      "Développement d'applications web full-stack et conception d'API REST pour l'intégration de services. Prise en charge de la gestion des bases de données et réalisation de la maintenance corrective pour assurer la stabilité des applications.",
+    technologies: ["JavaScript", "React/Angular/Vue", "API REST", "Bases de données"],
     current: false,
   },
   {
-    period: "2019 — 2020",
-    role: "Junior Developer",
-    company: "StartUp Labs",
+    period: "05/2023 — 10/2023",
+    role: "Apprenant Développeur Web (Stagiaire IT)",
+    company: "DIS BUSINESS GROUP - Douala",
     description:
-      "Contributed to the development of a SaaS platform from MVP to production. Collaborated with designers to implement pixel-perfect UI components.",
-    technologies: ["React", "Node.js", "MongoDB", "AWS"],
-    current: false,
-  },
-  {
-    period: "2018 — 2019",
-    role: "Freelance Developer",
-    company: "Self-Employed",
-    description:
-      "Delivered custom web solutions for small businesses and startups. Built 15+ websites and applications, handling everything from design to deployment.",
-    technologies: ["JavaScript", "PHP", "WordPress", "MySQL"],
+      "Conception d'une interface utilisateur fonctionnelle et développement d'une application complète de gestion d'entreprise. Mise en place d'une architecture CRUD et gestion de la base de données locale.",
+    technologies: ["Python", "SQLite", "Tkinter", "UI Design"],
     current: false,
   },
 ];
@@ -52,17 +43,17 @@ export const Experience = () => {
             className="text-secondary-foreground text-sm
            font-medium tracking-wider uppercase animate-fade-in"
           >
-            Career Journey
+            Parcours Professionnel
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold
            mt-4 mb-6 animate-fade-in animation-delay-100
             text-secondary-foreground"
           >
-            Experience that{" "}
+            De la théorie{" "}
             <span className="font-serif italic font-normal text-white">
               {" "}
-              speaks volumes.
+              à la pratique 
             </span>
           </h2>
 
@@ -70,8 +61,7 @@ export const Experience = () => {
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
-            A timeline of my professional growth, from curious beginner to
-            senior engineer leading teams and building products at scale.
+            Une chronologie de mon évolution, de mes premiers pas en tant qu'apprenant développeur jusqu'à la conception d'applications full-stack en entreprise. Une progression guidée par la rigueur et l'envie d'apprendre en continu.
           </p>
         </div>
 
