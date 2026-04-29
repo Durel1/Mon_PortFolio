@@ -85,9 +85,19 @@ export const Navbar = () => {
               </a>
             ))}
 
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
-              Contactez-moi
-            </Button>
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                setIsMobileMenuOpen(false);
+                setTimeout(() => {
+                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                }, 150);
+              }}
+              className="block w-full"
+            >
+              <Button>Contactez-moi</Button>
+            </a>
           </div>
         </div>
       )}
