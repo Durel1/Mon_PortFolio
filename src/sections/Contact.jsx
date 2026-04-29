@@ -75,12 +75,12 @@ export const Contact = () => {
         message: "Message sent successfully! I'll get back to you soon.",
       });
       setFormData({ name: "", email: "", message: "" });
-    } catch (err) {
+   } catch (error) { // Remplacer err par error ici
       console.error("EmailJS error:", error);
       setSubmitStatus({
         type: "error",
         message:
-          error.text || "Failed to send message. Please try again later.",
+          error.text || "Échec de l'envoi du message. Veuillez réessayer plus tard.",
       });
     } finally {
       setIsLoading(false);
