@@ -35,15 +35,21 @@ const skills = [
   "GitHub Actions",
 ];
 
+// Fonction déterministe pour générer des valeurs pseudo-aléatoires
+const seededRandom = (seed) => {
+  const x = Math.sin(seed) * 10000;
+  return x - Math.floor(x);
+};
+
 export const Hero = () => {
   const dots = useMemo(
     () =>
       [...Array(30)].map((_, i) => ({
         id: i,
-        left: Math.random() * 100,
-        top: Math.random() * 100,
-        duration: 15 + Math.random() * 20,
-        delay: Math.random() * 5,
+        left: seededRandom(i * 1.1) * 100,
+        top: seededRandom(i * 2.2) * 100,
+        duration: 15 + seededRandom(i * 3.3) * 20,
+        delay: seededRandom(i * 4.4) * 5,
       })),
     []
   );
