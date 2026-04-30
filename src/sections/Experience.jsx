@@ -19,7 +19,7 @@ const experiences = [
   },
   {
     period: "05/2023 — 10/2023",
-    role: "Apprenant Développeur Web (Stagiaire IT)",
+    role: "Apprenant Développeur (Stagiaire IT)",
     company: "DIS BUSINESS GROUP - Douala",
     description:
       "Conception d'une interface utilisateur fonctionnelle et développement d'une application complète de gestion d'entreprise. Mise en place d'une architecture CRUD et gestion de la base de données locale.",
