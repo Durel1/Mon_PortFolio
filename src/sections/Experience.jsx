@@ -23,7 +23,7 @@ const experiences = [
     company: "DIS BUSINESS GROUP - Douala",
     description:
       "Conception d'une interface utilisateur fonctionnelle et développement d'une application complète de gestion d'entreprise. Mise en place d'une architecture CRUD et gestion de la base de données locale.",
-    technologies: ["Python", "SQLite", "Tkinter", "UI Design"],
+    technologies: ["java", "Python", "SQLite", "Tkinter", "UI Design"],
     current: false,
   },
 ];
