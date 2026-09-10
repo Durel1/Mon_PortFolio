@@ -1,145 +1,151 @@
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+
 const projects = [
   {
-    title: "Explorateur de Données Offshore Leaks",
+    title: "Offshore Leaks – Analyse de réseaux",
+    context: "Projet Data Science • ESIEA",
     description:
-      "Une plateforme d'exploration et d'analyse de données de réseaux massifs liés aux paradis fiscaux et à la transparence financière. Elle propose une visualisation graphique interactive, une recherche par entité et une détection d'anomalies, permettant de révéler des connexions cachées entre entreprises, individus et juridictions.",
+      "Analyse d’environ 810 000 entités issues des Offshore Leaks : préparation des données, modélisation de graphes, détection de communautés et identification d’anomalies.",
     image: "/projects/project1.png",
-    tags: ["Python", "Data Analysis", "Théorie des Graphes","Visualisation Interactive"],
-    link: "https://offshoreleaks.icij.org/",
-    github: "https://github.com/Durel1/Offshore_Leaks",
+    tags: ["Python", "pandas", "NetworkX", "scikit-learn"],
+    links: [
+      {
+        label: "Voir le code",
+        href: "https://github.com/Durel1/Offshore_Leaks",
+        icon: Github,
+      },
+      {
+        label: "Source des données",
+        href: "https://offshoreleaks.icij.org/",
+        icon: ExternalLink,
+      },
+    ],
   },
   {
     title: "GetJob",
+    context: "Application full-stack",
     description:
-      "Une plateforme full-stack de recrutement connectant les étudiants et les recruteurs, intégrant une authentification sécurisée et la gestion des données en temps réel.React Supabase Real-time Data",
+      "Plateforme mettant en relation étudiants et recruteurs, avec profils, offres, candidatures, authentification, stockage de CV et synchronisation des données en temps réel.",
     image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
-    link: "https://my-getjob-app.vercel.app/",
-    github: "https://github.com/Durel1/GetJob",
-  },
-   {
-    title: "E-Commerce Platform",
-    description:
-      "Une solution e-commerce complète avec gestion des stocks, traitement des paiements et tableau de bord analytique.",
-    image: "/projects/project2.png",
-    tags: ["Angula","Tailwind", "PHP", "Laravel","MySQL"],
-    link: "#",
-    github: "#",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
+    links: [
+      {
+        label: "Voir la démo",
+        href: "https://my-getjob-app.vercel.app/",
+        icon: ArrowUpRight,
+      },
+      {
+        label: "Voir le code",
+        href: "https://github.com/Durel1/GetJob",
+        icon: Github,
+      },
+    ],
   },
   {
-    title: "Serveur MCP – Pilotage IA & Robotique",
+    title: "Serveur MCP pour l’Esieabot",
+    context: "IA, systèmes & robotique • ESIEA",
     description:
-      "Implémentation du Model Context Protocol (MCP) pour créer un pont sécurisé entre une IA et le monde physique, transformant un robot en un agent autonome capable d'explorer et d'analyser son environnement.",
+      "Serveur FastMCP permettant à une IA de piloter un robot à distance : commandes moteurs, caméra, ressources système et communication sécurisée par tunnel SSH.",
     image: "/projects/project4.png",
-    tags: ["Python", "FastMCP", "Raspberry Pi", "Claude AI"],
-    link: "https://github.com/Durel1/ServeurMCP_pour_esieabot",
-    github: "https://github.com/Durel1/ServeurMCP_pour_esieabot",
+    tags: ["Python", "FastMCP", "Raspberry Pi", "SSH"],
+    links: [
+      {
+        label: "Voir le code",
+        href: "https://github.com/Durel1/ServeurMCP_pour_esieabot",
+        icon: Github,
+      },
+    ],
   },
 ];
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-32 relative overflow-hidden">
-      {/* Bg glows */}
+    <section id="projects" className="py-24 md:py-28 relative overflow-hidden">
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
       <div className="container mx-auto px-6 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mx-auto max-w-3xl mb-16">
-          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            Projets Phares
+        <div className="text-center mx-auto max-w-3xl mb-14">
+          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
+            Projets sélectionnés
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-            Des réalisations
+          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-secondary-foreground">
+            Des réalisations qui montrent
             <span className="font-serif italic font-normal text-white">
-              {" "}
-               qui ont de l'impact.
+              {" "}ma progression.
             </span>
           </h2>
-          <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            Une sélection de mes travaux récents, allant de l'analyse complexe de réseaux de données massifs au développement d'applications web complètes et d'architectures Cloud intégrant l'IA.
+          <p className="text-muted-foreground text-lg">
+            Chaque projet me permet de relier théorie, choix techniques et résultat
+            utilisable, du traitement des données jusqu’à l’application.
           </p>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, idx) => (
-            <div
-              key={idx}
-              className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
-              style={{ animationDelay: `${(idx + 1) * 100}ms` }}
+        <div className="grid lg:grid-cols-3 gap-7">
+          {projects.map((project) => (
+            <article
+              key={project.title}
+              className="group glass rounded-2xl overflow-hidden flex flex-col border border-primary/10 hover:border-primary/35 transition-colors"
             >
-              {/* Image */}
               <div className="relative overflow-hidden aspect-video">
                 <img
                   src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  alt={`Aperçu du projet ${project.title}`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div
-                  className="absolute inset-0 
-                bg-gradient-to-t from-card via-card/50
-                 to-transparent opacity-60"
-                />
-                {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a
-                    href={project.link}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                  >
-                    <ArrowUpRight className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={project.github}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                  >
-                    <Github className="w-5 h-5" />
-                  </a>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent" />
               </div>
 
-              {/* Content */}
-              <div className="p-6 space-y-4">
-                <div className="flex items-start justify-between">
-                  <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
-                  <ArrowUpRight
-                    className="w-5 h-5 
-                  text-muted-foreground group-hover:text-primary
-                   group-hover:translate-x-1 
-                   group-hover:-translate-y-1 transition-all"
-                  />
-                </div>
-                <p className="text-muted-foreground text-sm">
+              <div className="p-6 flex flex-col flex-1">
+                <p className="text-xs uppercase tracking-wider text-primary font-medium">
+                  {project.context}
+                </p>
+                <h3 className="text-xl font-semibold mt-2 mb-3">{project.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed flex-1">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, tagIdx) => (
+
+                <div className="flex flex-wrap gap-2 mt-5">
+                  {project.tags.map((tag) => (
                     <span
-                      key={tagIdx}
-                      className="px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300"
+                      key={tag}
+                      className="px-3 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/60 text-muted-foreground"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
+
+                <div className="flex flex-wrap gap-3 mt-6 pt-5 border-t border-border/70">
+                  {project.links.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+                    >
+                      <link.icon className="w-4 h-4" />
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
-        {/* View All CTA */}
-        <a href="https://github.com/Durel1?tab=repositories">
-        <div className="text-center mt-12 animate-fade-in animation-delay-500">
-          <AnimatedBorderButton>
-            Voir tous Mes projets
-            <ArrowUpRight className="w-5 h-5" />
-          </AnimatedBorderButton>
+        <div className="text-center mt-12">
+          <a
+            href="https://github.com/Durel1?tab=repositories"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AnimatedBorderButton>
+              Voir tous mes projets
+              <ArrowUpRight className="w-5 h-5" />
+            </AnimatedBorderButton>
+          </a>
         </div>
-        </a>
       </div>
     </section>
   );

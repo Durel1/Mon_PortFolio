@@ -1,41 +1,29 @@
 import { useMemo } from "react";
-import { Button } from "@/components/Button";
 import {
   ArrowRight,
   ChevronDown,
   Github,
   Linkedin,
-  X,
   Download,
 } from "lucide-react";
-import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
 const skills = [
-  "React.js",
-  "Angular.js",
-  "Vue.js",
-  "JavaScript",
+  "Python",
+  "pandas",
+  "scikit-learn",
+  "NetworkX",
+  "SQL",
+  "React",
   "TypeScript",
-  "Node.js",
+  "FastAPI",
   "Java",
   "Spring Boot",
-  "PHP",
-  "Laravel",
-  "Python",
-  "MySQL",
-  "PostgreSQL",
   "Supabase",
   "Docker",
-  "AWS",
-  "Vercel",
-  "Tailwind CSS",
-  "Figma",
   "Git",
-  "CI/CD",
-  "GitHub Actions",
 ];
 
-// Fonction déterministe pour générer des valeurs pseudo-aléatoires
 const seededRandom = (seed) => {
   const x = Math.sin(seed) * 10000;
   return x - Math.floor(x);
@@ -51,27 +39,25 @@ export const Hero = () => {
         duration: 15 + seededRandom(i * 3.3) * 20,
         delay: seededRandom(i * 4.4) * 5,
       })),
-    []
+    [],
   );
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Bg */}
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img
           src="/hero-bg.jpg"
-          alt="Hero image"
-          className="w-full h-full object-cover opacity-40"
+          alt=""
+          className="w-full h-full object-cover opacity-35"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/85 to-background" />
       </div>
 
-      {/* Green Dots */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         {dots.map((dot) => (
           <div
             key={dot.id}
-            className="absolute w-1.5 h-1.5 rounded-full opacity-60"
+            className="absolute w-1.5 h-1.5 rounded-full opacity-50"
             style={{
               backgroundColor: "#20B2A6",
               left: `${dot.left}%`,
@@ -83,125 +69,125 @@ export const Hero = () => {
         ))}
       </div>
 
-      {/* Content */}
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Text Content */}
-          <div className="space-y-8">
-            <div className="animate-fade-in">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
-                <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Étudiant Ingénieur • Développeur Logiciel & Data
-              </span>
-            </div>
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
+          <div className="space-y-7">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary animate-fade-in">
+              <span className="w-2 h-2 bg-primary rounded-full" />
+              ESIEA • 4e année • Majeure IA & Data Science
+            </span>
 
-            {/* Headline */}
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Concevoir<br/><span className="text-primary glow-text"> des solutions</span>
-                <br />
-                avec
-                <br />
-                <span className="font-serif italic font-normal text-white">
-                  précision.
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] animate-fade-in animation-delay-100">
+                Durel Kenfack
+                {/* Ajout des tailles de texte et de whitespace-nowrap ici */}
+                <span className="block text-primary glow-text mt-2 text-4xl md:text-5xl lg:text-6xl whitespace-nowrap">
+                  Étudiant ingénieur
+                </span>
+                <span className="block font-serif italic font-normal text-white text-4xl md:text-5xl lg:text-6xl mt-3">
+                  IA, Data & logiciel.
                 </span>
               </h1>
-              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Bonjour, je suis Durel Kenfack, étudiant ingénieur spécialisé en développement logiciel
-                et intelligence artificielle. En m'appuyant sur des technologies comme React, Python et 
-                Java, j'aime comprendre la mécanique de chaque ligne de code pour créer des applications 
-                performantes. Je suis actuellement à la recherche d'une alternance de 2 ans  pour mettre
-                cette polyvalence au service de vos projets.
+              <p className="text-lg text-muted-foreground max-w-xl animate-fade-in animation-delay-200">
+                Je construis une double compétence en intelligence artificielle,
+                data science et développement logiciel. Cette année, mon objectif
+                est de consolider mes acquis par des projets concrets, des
+                certifications ciblées et un stage, afin de préparer une alternance
+                à la rentrée 2027.
               </p>
             </div>
 
-            {/* CTAs */}
+            <div className="flex flex-wrap gap-3 text-sm animate-fade-in animation-delay-300">
+              <span className="glass rounded-full px-4 py-2 text-foreground">
+                Recherche de stage • 2026–2027
+              </span>
+              <span className="glass rounded-full px-4 py-2 text-foreground">
+                Alternance visée • rentrée 2027
+              </span>
+            </div>
+
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
-                Contactez-moi <ArrowRight className="w-5 h-5" />
-              </Button>
+              <a
+                href="#projects"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-medium text-primary-foreground shadow-lg shadow-primary/25 hover:bg-primary/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              >
+                Découvrir mes projets <ArrowRight className="w-5 h-5" />
+              </a>
               <a href="/CV_Durel_Kenfack.pdf" download="CV_Durel_Kenfack.pdf">
                 <AnimatedBorderButton>
                   <Download className="w-5 h-5" />
-                    Téléchargez mon CV
+                  Télécharger mon CV
                 </AnimatedBorderButton>
               </a>
             </div>
 
-            {/* Social Links */}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-              <span className="text-sm text-muted-foreground">Suivez-moi: </span>
+              <span className="text-sm text-muted-foreground">Retrouvez mon travail :</span>
               {[
-                { icon: Github, href: "https://github.com/Durel1?tab=repositories", label: "GitHub" },
-                { icon: Linkedin, href: "https://www.linkedin.com/in/durel-kenfack-017b952a1/", label: "LinkedIn" },
-                { icon: X, href: "https://x.com/kenfdurel10", label: "X" },
-              ].map((social, idx) => (
+                {
+                  icon: Github,
+                  href: "https://github.com/Durel1?tab=repositories",
+                  label: "Profil GitHub de Durel Kenfack",
+                },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/in/durel-kenfack-017b952a1/",
+                  label: "Profil LinkedIn de Durel Kenfack",
+                },
+              ].map((social) => (
                 <a
-                  key={idx}
+                  key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={social.label}
                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                 >
-                  {<social.icon className="w-5 h-5" />}
+                  <social.icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
           </div>
-          {/* Right Column - Profile Image */}
-          <div className="relatice animate-fade-in animation-delay-300">
-            {/* Profile Image */}
+
+          <div className="relative animate-fade-in animation-delay-300">
             <div className="relative max-w-md mx-auto">
-              <div
-                className="absolute inset-0 
-              rounded-3xl bg-gradient-to-br 
-              from-primary/30 via-transparent 
-              to-primary/10 blur-2xl animate-pulse"
-              />
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl" />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
                   src="/My_profile_photo.png"
-                  alt="Pedro Machado"
+                  alt="Portrait de Durel Kenfack"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
 
-                {/* Floating Badge */}
-                <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                <div className="absolute -bottom-5 right-2 sm:-right-5 glass-strong rounded-xl px-4 py-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                    <span className="w-2.5 h-2.5 bg-primary rounded-full" />
                     <span className="text-sm font-medium">
-                      Disponible pour alternance
+                      Stage 2026–2027 • Alternance 2027
                     </span>
                   </div>
                 </div>
-                {/* Stats Badge */}
-                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">3+</div>
-                  <div className="text-xs text-muted-foreground">
-                    Years Exp.
-                  </div>
+
+                <div className="absolute -top-4 left-2 sm:-left-4 glass-strong rounded-xl px-4 py-3">
+                  <div className="text-xl font-bold text-primary">ESIEA</div>
+                  <div className="text-xs text-muted-foreground">4e année</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Skills Section */}
         <div className="mt-20 animate-fade-in animation-delay-600">
-          <p className="text-sm text-muted-foreground mb-6 text-center">
-            technologies avec lesquelles je travaille
+          <p className="text-sm text-muted-foreground mb-5 text-center">
+            Technologies et domaines que je mobilise
           </p>
-          <div className="relative overflow-hidden">
-            <div
-              className="absolute left-0 top-0 bottom-0 w-32
-             bg-gradient-to-r from-background to-transparent z-10"
-            />
-            <div
-              className="absolute right-0 top-0 bottom-0 w-32
-             bg-gradient-to-l from-background to-transparent z-10"
-            />
+          <div className="relative overflow-hidden" aria-label="Compétences principales">
+            <div className="absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-background to-transparent z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-background to-transparent z-10" />
             <div className="flex animate-marquee">
               {[...skills, ...skills].map((skill, idx) => (
-                <div key={idx} className="flex-shrink-0 px-8 py-4">
-                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
+                <div key={`${skill}-${idx}`} className="flex-shrink-0 px-7 py-4">
+                  <span className="text-lg font-semibold text-muted-foreground/70">
                     {skill}
                   </span>
                 </div>
@@ -211,18 +197,13 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 
-      animate-fade-in animation-delay-800"
+      <a
+        href="#about"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors"
       >
-        <a
-          href="#about"
-          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
-        >
-          <span className="text-xs uppercase tracking-wider">Scroll</span>
-          <ChevronDown className="w-6 h-6 animate-bounce" />
-        </a>
-      </div>
+        <span className="text-xs uppercase tracking-wider">Découvrir</span>
+        <ChevronDown className="w-6 h-6 animate-bounce" />
+      </a>
     </section>
   );
 };

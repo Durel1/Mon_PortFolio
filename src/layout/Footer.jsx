@@ -1,15 +1,15 @@
-import { Github, Linkedin, X, Heart } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/Durel1?tab=repositories", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/durel-kenfack-017b952a1/", label: "LinkedIn" },
-  { icon: X, href: "https://x.com/kenfdurel10", label: "X" },
 ];
 
 const footerLinks = [
-  { href: "#about", label: "À Propos" },
+  { href: "#about", label: "Profil" },
   { href: "#projects", label: "Projets" },
-  { href: "#experience", label: "Expérience" },
+  { href: "#skills", label: "Compétences" },
+  { href: "#education", label: "Formation" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -23,15 +23,14 @@ export const Footer = () => {
           {/* Logo & Copyright */}
           <div className="text-center md:text-left">
             <a
-          href="#"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          href="#home"
           className="text-xl font-bold tracking-tight hover:text-primary"
+          aria-label="Retour à l'accueil"
         >
-          <img src="/public/KD_Logo.png" alt="" className="h-10 w-auto" />
+          <img src="/KD_Logo.png" alt="Durel Kenfack" className="h-10 w-auto" />
         </a>
             <p className="text-sm text-muted-foreground mt-2">
-              © {currentYear} Durel Kenfack. Tous droits réservés
-.
+              © {currentYear} Durel Kenfack. Tous droits réservés.
             </p>
           </div>
 
@@ -55,6 +54,8 @@ export const Footer = () => {
                 key={social.label}
                 href={social.href}
                 aria-label={social.label}
+                target="_blank"
+                rel="noreferrer"
                 className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
               >
                 <social.icon className="w-5 h-5" />

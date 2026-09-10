@@ -1,94 +1,87 @@
-import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
+import { BrainCircuit, Code2, GraduationCap, Users } from "lucide-react";
 
-const highlights = [
+const profileMarkers = [
   {
-    icon: Code2,
-    title: "Code Maîtrisé",
+    icon: GraduationCap,
+    title: "4e année à l’ESIEA",
     description:
-      "Écrire un code propre, maintenable et structuré, en s'assurant de comprendre profondément chaque concept sous-jacent.",
+      "Deux années de formation pour approfondir mes compétences et construire un profil prêt pour l’entreprise.",
   },
   {
-    icon: Rocket,
-    title: "Performance & Polyvalence",
+    icon: BrainCircuit,
+    title: "Majeure IA & Data Science",
     description:
-      "Optimiser l'efficacité de chaque solution, de la fluidité des interfaces web au traitement de jeux de données massifs.",
+      "Une spécialisation centrée sur l’exploitation des données, l’apprentissage automatique et leurs applications.",
+  },
+  {
+    icon: Code2,
+    title: "Socle en développement",
+    description:
+      "Des bases solides en programmation, développement web, API et bases de données pour transformer une idée en produit.",
   },
   {
     icon: Users,
-    title: "CEsprit d'Équipe",
-    description: "Collaborer efficacement au sein d'équipes multidisciplinaires, en valorisant la communication et le partage de connaissances.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Curiosité & Innovation",
+    title: "Esprit d'équipe & Curiosité",
     description:
-      "Maintenir une veille technologique constante pour intégrer les meilleures pratiques et les dernières avancées en IA, Data et développement.",
+      "Collaborer pour faire progresser les projets collectifs, tout en approfondissant continuellement de nouvelles compétences techniques.",
   },
 ];
 
 export const About = () => {
   return (
-    <section id="about" className="py-32 relative overflow-hidden">
+    <section id="about" className="py-24 md:py-28 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Column */}
-          <div className="space-y-8">
-            <div className="animate-fade-in">
-              <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
-                À propos de moi
-              </span>
-            </div>
-
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Comprendre l'invisible pour,
+        
+        {/* Layout en 2 colonnes sur grand écran */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          
+          {/* Colonne de gauche : Textes et Citation */}
+          <div className="flex flex-col">
+            <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
+              Mon profil
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mt-4 text-secondary-foreground">
+              L’IA et la data comme spécialisation,
               <span className="font-serif italic font-normal text-white">
-                {" "}
-                construire des solutions d'impact.
+                {" "}le logiciel comme socle.
               </span>
             </h2>
-
-            <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
+            
+            <div className="mt-6 space-y-4 text-muted-foreground text-lg leading-relaxed">
               <p>
-                Je suis un étudiant ingénieur passionné par la conception d'outils numériques complets
-                 et intelligents. Mon parcours a débuté par une curiosité pour le développement web, 
-                 et a rapidement évolué vers une expertise transverse mêlant développement logiciel, 
-                 ingénierie des données et systèmes embarqués.
+                Mon parcours a commencé par le génie informatique et le génie
+                logiciel. À l’ESIEA, je développe aujourd’hui une spécialisation en
+                intelligence artificielle et data science sans abandonner ce qui fait
+                ma force : concevoir des applications complètes, structurées et utiles.
               </p>
               <p>
-                De la création d'architectures backend (Python, Java) au développement d'interfaces interactives (React, Angular),
-                ma philosophie technique est stricte : toujours maîtriser les concepts sous-jacents de mon code plutôt
-                que de me limiter à leur simple application.
-              </p>
-              <p>
-                Lorsque je ne suis pas en train de coder ou d'explorer de nouvelles documentations techniques, je m'investis dans les sports d'équipe comme le football ou le basket-ball, où je retrouve la même dynamique de collaboration et de stratégie que dans mes projets d'ingénierie. Je suis actuellement à la recherche d'une alternance de 2 ans à partir de septembre 2026, sur un rythme de 2 semaines / 2 semaines, pour évoluer en tant que développeur logiciel ou data scientist au sein d'une équipe stimulante.
+                Mon objectif est de savoir travailler sur toute la chaîne, de la
+                préparation des données et l’expérimentation jusqu’à l’API et
+                l’interface qui rendent la solution exploitable. Je documente aussi
+                progressivement mes projets sur GitHub et LinkedIn.
               </p>
             </div>
 
-            <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
-              <p className="text-lg font-medium italic text-foreground">
-                "Ma mission est de concevoir des applications où la complexité technique s'efface pour laisser place à des solutions robustes, fluides et véritablement utiles."
+            <div className="mt-10 glass rounded-2xl p-6 md:p-8 glow-border">
+              <p className="text-xl font-medium text-foreground italic">
+                "J’apprends en réalisant des projets concrets et en comprenant les choix techniques derrière chaque solution."
               </p>
             </div>
           </div>
 
-          {/* Right Column - Hilights */}
-          <div className="grid sm:grid-cols-2 gap-6">
-            {highlights.map((item, idx) => (
-              <div
-                key={idx}
-                className="glass p-6 rounded-2xl animate-fade-in"
-                style={{ animationDelay: `${(idx + 1) * 100}ms` }}
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
+          {/* Colonne de droite : Grille de 4 cartes (2x2) avec marge supérieure ajustée */}
+          <div className="grid sm:grid-cols-2 gap-6 lg:mt-20">
+            {profileMarkers.map((item) => (
+              <article key={item.title} className="glass p-6 rounded-2xl border border-primary/10">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">
-                  {item.description}
-                </p>
-              </div>
+                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                <p className="text-muted-foreground text-sm">{item.description}</p>
+              </article>
             ))}
           </div>
+
         </div>
       </div>
     </section>
