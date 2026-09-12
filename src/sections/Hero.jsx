@@ -113,7 +113,7 @@ export const Hero = () => {
               >
                 Découvrir mes projets <ArrowRight className="w-5 h-5" />
               </a>
-              <a href="/CV_Durel_Kenfack.pdf" download="CV_Durel_Kenfack_stage.pdf">
+              <a href="/CV_Durel_Kenfack_stage.pdf" download="CV_Durel_Kenfack_stage.pdf">
                 <AnimatedBorderButton>
                   <Download className="w-5 h-5" />
                   Télécharger mon CV
